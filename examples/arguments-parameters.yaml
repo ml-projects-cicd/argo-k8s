@@ -1,4 +1,4 @@
 message: this is a message coming from the parameters file!
-message-heads: (from the params file) seems like you got heads!
+message-heads: (from the params file) seems like you got head!
 message-tails: (from the params file) tails it is!
 log-level: WARNING
