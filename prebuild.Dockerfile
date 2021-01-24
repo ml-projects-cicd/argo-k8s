@@ -9,7 +9,7 @@ RUN gunzip argo-linux-amd64.gz
 RUN chmod +x argo-linux-amd64
 
 # Move binary to path
-RUN sudo mv ./argo-linux-amd64 /usr/local/bin/argo
+RUN mv ./argo-linux-amd64 /usr/local/bin/argo
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
