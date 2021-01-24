@@ -31,7 +31,7 @@ jobs:
 
     - name: pull from Docker
       id: argo
-      uses: ml-projects-cicd/argo-k8s@main
+      uses: ml-projects-cicd/argo-k8s@master
       with:
         argo_url: ${{ secrets.ARGO_URI }}
         application_credentials: ${{ secrets.APPLICATION_CREDENTIALS }}
