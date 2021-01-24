@@ -23,15 +23,15 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         echo ${PASSWORD} | docker login -u $USERNAME --password-stdin
-        docker build -t hamelsmu/gke-argo -f prebuild.Dockerfile .
-        docker push hamelsmu/gke-argo
+        docker build -t geewynn/gke-k8s -f prebuild.Dockerfile .
+        docker push geewynn/gke-k8s
       env:
         USERNAME: ${{ secrets.DOCKER_USERNAME }}
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: pull from Docker
       id: argo
-      uses: machine-learning-apps/gke-argo@master
+      uses: ml-projects-cicd/argo-k8s@main
       with:
         argo_url: ${{ secrets.ARGO_URI }}
         application_credentials: ${{ secrets.APPLICATION_CREDENTIALS }}
